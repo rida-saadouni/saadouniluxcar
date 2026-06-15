@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPremium — Vente de Véhicules d'Occasion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo" id="logo-trigger" onclick="logoClick()" title="">SAADOUNI <span>LUX CAR</span></div>
+    <ul class="nav-links">
+      <li><a href="#catalogue">Catalogue</a></li>
+    </ul>
+    <a class="nav-btn" href="https://wa.me/212648589461" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block">💬 Nous contacter</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+
+    <!-- LOGO VISUEL CÔTÉ DROIT -->
+    <div class="hero-logo-side">
+      <svg class="hero-logo-svg" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#CC0000"/>
+            <stop offset="100%" stop-color="#880000"/>
+          </linearGradient>
+          <linearGradient id="darkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2a1010"/>
+            <stop offset="100%" stop-color="#0d0000"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Cercle décoratif extérieur -->
+        <circle cx="260" cy="190" r="170" fill="none" stroke="rgba(204,0,0,0.12)" stroke-width="1"/>
+        <circle cx="260" cy="190" r="148" fill="none" stroke="rgba(204,0,0,0.08)" stroke-width="1"/>
+
+        <!-- Fond hexagonal / bouclier -->
+        <path d="M260 30 L400 110 L400 270 L260 350 L120 270 L120 110 Z"
+              fill="url(#darkGrad)" stroke="url(#logoGrad)" stroke-width="2.5" opacity="0.95"/>
+
+        <!-- Lignes déco intérieures -->
+        <path d="M260 52 L382 124 L382 256 L260 328 L138 256 L138 124 Z"
+              fill="none" stroke="rgba(204,0,0,0.2)" stroke-width="1"/>
+
+        <!-- Voiture SVG intégrée dans le bouclier -->
+        <g transform="translate(148, 155) scale(0.43)">
+          <!-- Ombre -->
+          <ellipse cx="250" cy="218" rx="230" ry="12" fill="rgba(0,0,0,0.4)"/>
+          <!-- Carrosserie -->
+          <path d="M30 170 L75 118 L140 85 L220 70 L330 70 L410 85 L475 130 L500 170 L500 195 L30 195 Z"
+                fill="#1a0505" stroke="rgba(204,0,0,0.35)" stroke-width="1.5"/>
+          <!-- Toit / vitres -->
+          <path d="M105 118 L148 80 L218 70 L328 70 L398 80 L440 118 Z"
+                fill="rgba(204,0,0,0.1)" stroke="rgba(204,0,0,0.4)" stroke-width="1.2"/>
+          <path d="M115 116 L152 82 L220 72 L328 72 L395 82 L433 116 Z"
+                fill="rgba(20,0,0,0.7)"/>
+          <line x1="272" y1="72" x2="272" y2="116" stroke="rgba(204,0,0,0.25)" stroke-width="1.5"/>
+          <!-- Roue gauche -->
+          <circle cx="140" cy="196" r="36" fill="#0d0000" stroke="url(#logoGrad)" stroke-width="3.5"/>
+          <circle cx="140" cy="196" r="22" fill="#160000"/>
+          <circle cx="140" cy="196" r="7" fill="url(#logoGrad)"/>
+          <!-- Roue droite -->
+          <circle cx="400" cy="196" r="36" fill="#0d0000" stroke="url(#logoGrad)" stroke-width="3.5"/>
+          <circle cx="400" cy="196" r="22" fill="#160000"/>
+          <circle cx="400" cy="196" r="7" fill="url(#logoGrad)"/>
+          <!-- Phares -->
+          <ellipse cx="486" cy="152" rx="12" ry="7" fill="rgba(204,0,0,0.7)" filter="url(#glow)"/>
+          <ellipse cx="44" cy="152" rx="10" ry="6" fill="rgba(204,0,0,0.4)"/>
+        </g>
+
+        <!-- Ligne déco sous la voiture -->
+        <line x1="148" y1="228" x2="372" y2="228" stroke="url(#logoGrad)" stroke-width="1" opacity="0.5"/>
+
+        <!-- Texte SAADOUNI -->
+        <text x="260" y="270" text-anchor="middle"
+              font-family="Georgia, serif" font-size="22" font-weight="bold"
+              fill="#F5F5F5" letter-spacing="6">SAADOUNI</text>
+
+        <!-- Texte LUX CAR -->
+        <text x="260" y="296" text-anchor="middle"
+              font-family="Georgia, serif" font-size="14"
+              fill="url(#logoGrad)" letter-spacing="10">LUX CAR</text>
+
+        <!-- Ligne dorée décorative -->
+        <line x1="180" y1="308" x2="340" y2="308" stroke="url(#logoGrad)" stroke-width="1.5"/>
+
+        <!-- Étoiles décoratives -->
+        <text x="170" y="312" text-anchor="middle" font-size="8" fill="rgba(204,0,0,0.6)">✦</text>
+        <text x="350" y="312" text-anchor="middle" font-size="8" fill="rgba(204,0,0,0.6)">✦</text>
+
+        <!-- Courbe déco bas -->
+        <path d="M120 340 Q260 380 400 340" fill="none" stroke="rgba(204,0,0,0.15)" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <!-- LOGO TEXTE HERO -->
+      <div class="hero-brand">
+        <div class="hero-brand-main">
+          <span class="hero-brand-name">SAADOUNI</span>
+          <span class="hero-brand-sub">LUX CAR</span>
+        </div>
+        <div class="hero-brand-line"></div>
+        <div class="hero-brand-tagline">Location de Voitures Premium</div>
+      </div>
+
+      <p class="hero-sub">Découvrez notre flotte de véhicules haut de gamme. Confort, élégance et fiabilité pour tous vos déplacements au Maroc.</p>
+
+      <div class="hero-cta">
+        <a class="btn-primary btn-whatsapp"
+           href="https://wa.me/212648589461?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20chez%20Saadouni%20Lux%20Car."
+           target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="flex-shrink:0">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Nous contacter sur WhatsApp
+        </a>
+        <button class="btn-outline" onclick="document.getElementById('catalogue').scrollIntoView({behavior:'smooth'})">
+          Voir les voitures
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div><span class="stat-num" id="total-count">0</span><span class="stat-label">Véhicules</span></div>
+        <div><span class="stat-num" id="dispo-count">0</span><span class="stat-label">Disponibles</span></div>
+        <div><span class="stat-num">100%</span><span class="stat-label">Premium</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGUE -->
+  <section id="catalogue">
+    <div class="section-eyebrow">Notre Stock</div>
+    <h2 class="section-title">CATALOGUE COMPLET</h2>
+
+    <div class="filter-bar-wrap">
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="tous">Tous</button>
+        <button class="filter-btn" data-filter="berline">Berline</button>
+        <button class="filter-btn" data-filter="suv">SUV / 4x4</button>
+        <button class="filter-btn" data-filter="citadine">Citadine</button>
+        <button class="filter-btn" data-filter="break">Break</button>
+        <button class="filter-btn" data-filter="coupe">Coupé</button>
+        <button class="filter-btn" data-filter="utilitaire">Utilitaire</button>
+        <button class="filter-btn" data-filter="disponible">✓ Disponibles</button>
+      </div>
+    </div>
+
+    <div class="cars-grid" id="cars-grid">
+      <div class="no-results" id="no-results">Aucun véhicule trouvé.</div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+      <div class="modal-img" id="modal-img"></div>
+      <div class="modal-body">
+        <div class="modal-brand" id="modal-brand"></div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <div class="modal-status" id="modal-status"></div>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-specs-grid" id="modal-specs"></div>
+        <div class="modal-price-row">
+          <div class="modal-price" id="modal-price"></div>
+          <div id="modal-action"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="login-overlay" id="login-overlay" onclick="closeLoginOutside(event)">
+    <div class="login-box">
+      <div class="login-logo">AUTO<span>PREMIUM</span></div>
+      <div class="login-title">Accès Administration</div>
+      <div class="login-sub">Entrez votre mot de passe pour continuer</div>
+      <div class="login-field-wrap">
+        <input type="password" class="login-input" id="login-input" placeholder="Mot de passe" onkeydown="if(event.key==='Enter')checkLogin()">
+        <div class="login-error" id="login-error"></div>
+      </div>
+      <button class="login-btn" onclick="checkLogin()">Connexion →</button>
+      <button class="login-cancel" onclick="closeLogin()">Annuler</button>
+    </div>
+  </div>
+
+  <!-- ADMIN TOGGLE (caché par défaut, visible après login) -->
+  <button class="admin-toggle" id="admin-toggle-btn" onclick="toggleAdmin()" title="Administration" style="display:none">⚙</button>
+
+  <!-- ADMIN PANEL -->
+  <div class="admin-panel" id="admin-panel">
+    <button class="admin-close" onclick="toggleAdmin()">✕</button>
+    <div class="admin-title">Administration</div>
+    <div class="admin-subtitle">Gérez votre catalogue de véhicules</div>
+
+    <div class="admin-section-title">Ajouter un véhicule</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Marque</label>
+        <input class="form-input" id="f-marque" placeholder="Ex: Toyota">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Modèle</label>
+        <input class="form-input" id="f-modele" placeholder="Ex: Corolla">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Type</label>
+        <select class="form-select" id="f-type">
+          <option value="berline">Berline</option>
+          <option value="suv">SUV / 4x4</option>
+          <option value="citadine">Citadine</option>
+          <option value="break">Break</option>
+          <option value="coupe">Coupé</option>
+          <option value="utilitaire">Utilitaire</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Statut</label>
+        <select class="form-select" id="f-statut">
+          <option value="disponible">Disponible</option>
+          <option value="reserve">Réservé</option>
+          <option value="vendu">Vendu</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Prix (MAD)</label>
+        <input class="form-input" id="f-prix" type="number" placeholder="Ex: 85000">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Année</label>
+        <input class="form-input" id="f-annee" type="number" placeholder="Ex: 2020">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Kilométrage</label>
+        <input class="form-input" id="f-km" type="number" placeholder="Ex: 45000">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Carburant</label>
+        <select class="form-select" id="f-carburant">
+          <option value="Essence">Essence</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Hybride">Hybride</option>
+          <option value="Électrique">Électrique</option>
+          <option value="GPL">GPL</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Transmission</label>
+        <select class="form-select" id="f-trans">
+          <option value="Manuelle">Manuelle</option>
+          <option value="Automatique">Automatique</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Couleur</label>
+        <input class="form-input" id="f-couleur" placeholder="Ex: Noir">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description</label>
+      <textarea class="form-textarea" id="f-desc" placeholder="État, équipements, options..."></textarea>
+    </div>
+    <button class="btn-add" onclick="addCar()">+ Ajouter au catalogue</button>
+
+    <hr class="admin-divider">
+    <div class="admin-section-title">Catalogue (<span id="admin-count">0</span> véhicules)</div>
+    <div class="admin-car-list" id="admin-car-list"></div>
+    <button class="btn-logout" onclick="logout()">⎋ Se déconnecter</button>
+  </div>
+
+  <!-- PHOTO MANAGER -->
+  <div class="pm-overlay" id="photo-manager" onclick="closePMOutside(event)">
+    <div class="pm-box">
+      <div class="pm-header">
+        <div>
+          <div class="pm-eyebrow">Gestion des photos</div>
+          <div class="pm-title" id="pm-title"></div>
+        </div>
+        <button class="pm-close" onclick="closePhotoManager()">✕</button>
+      </div>
+      <div class="pm-count" id="pm-count">0 / 5 photo(s)</div>
+      <div class="pm-grid" id="pm-grid"></div>
+      <label class="pm-upload-btn" id="pm-upload-btn" for="photo-input">
+        <span>+</span> Ajouter des photos
+        <input type="file" id="photo-input" accept="image/*" multiple style="display:none">
+      </label>
+      <p class="pm-hint">Maximum 5 photos · La première photo sera utilisée comme miniature · Formats : JPG, PNG, WEBP</p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    function closePMOutside(e) {
+      if (e.target === document.getElementById('photo-manager')) closePhotoManager();
+    }
+    function closeLoginOutside(e) {
+      if (e.target === document.getElementById('login-overlay')) closeLogin();
+    }
+  </script>
+</body>
+</html>
